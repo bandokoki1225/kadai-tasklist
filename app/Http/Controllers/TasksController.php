@@ -69,27 +69,27 @@ class TasksController extends Controller
     }
 
     // putまたはpatchでTasks/（任意のid）にアクセスされた場合の「更新処理」
-    // public function update(Request $request, string $id)
-    // {
-    //     // idの値でメッセージを検索して取得
-    //     $Task = Task::findOrFail($id);
-    //     // メッセージを更新
-    //     $Task->content = $request->content;
-    //     $Task->save();
+    public function update(Request $request, string $id)
+    {
+        // idの値でメッセージを検索して取得
+        $Task = Task::findOrFail($id);
+        // メッセージを更新
+        $Task->content = $request->content;
+        $Task->save();
 
-    //     // トップページへリダイレクトさせる
-    //     return redirect('/');
-    // }
+        // トップページへリダイレクトさせる
+        return redirect('/');
+    }
 
     // deleteでTasks/（任意のid）にアクセスされた場合の「削除処理」
-    // public function destroy(string $id)
-    // {
-    //     // idの値でメッセージを検索して取得
-    //     $Task = Task::findOrFail($id);
-    //     // メッセージを削除
-    //     $Task->delete();
+    public function destroy(string $id)
+    {
+        // idの値でメッセージを検索して取得
+        $Task = Task::findOrFail($id);
+        // メッセージを削除
+        $Task->delete();
 
-    //     // トップページへリダイレクトさせる
-    //     return redirect('/');
-    // }
+        // トップページへリダイレクトさせる
+        return redirect('/');
+    }
 }
