@@ -16,6 +16,11 @@
             <th>タスク</th>
             <td>{{ $Task->content }}</td>
         </tr>
+
+        <tr>
+            <th>ステータス</th>
+            <td>{{ $Task->status }}</td>
+        </tr>
     </table>
     {{-- タスク編集ページへのリンク --}}
     <a class="btn btn-outline" href="{{ route('Tasks.edit', $Task->id) }}">このタスクを編集</a>
