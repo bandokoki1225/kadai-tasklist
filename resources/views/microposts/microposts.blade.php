@@ -29,6 +29,9 @@
                                         onclick="return confirm('Delete id = {{ $micropost->id }} ?')">Delete</button>
                                 </form>
                             @endif
+
+                            {{-- お気に入りボタン --}}
+                            @include('save_favorites.favorites_button')
                         </div>
                     </div>
                 </li>
